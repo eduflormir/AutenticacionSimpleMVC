@@ -10,6 +10,8 @@ namespace AutenticacionSimpleMVC5.Controllers
     public class HomeController : Controller
     {
         // GET: Home
+        //[Authorize(Roles = "Admin")]
+        [Authorize(Users = "Admin")]
         public ActionResult Index()
         {
             return View();
